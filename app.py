@@ -705,6 +705,7 @@ def process_message(text,sender_id):
         words=text.split(" ")
         print("Before GetMethod")
         strResponse = GetMethod(text)
+        print(text)
         print("After GetMethod")
         Action = ProcessAPIAIResponse(strResponse)
         print(Action)
