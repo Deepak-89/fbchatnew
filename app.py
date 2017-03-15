@@ -1,5 +1,4 @@
 
-import os
 import sys
 import json
 
@@ -22,7 +21,7 @@ from datetime import datetime
 ##from nltk.tokenize import word_tokenize
 
 app = Flask(__name__)
-CLIENT_ACCESS_TOKEN = 'd00c333e479d4ab98ca073375196ade2'
+CLIENT_ACCESS_TOKEN = '02c71e6097984c9691f891e0f63a0c14'
 
 #@app.route('/GetMethod', methods=['Get'])
 def GetMethod(strUserQuery):
@@ -104,7 +103,7 @@ def send_message(recipient_id, message_text):
     locFinderUrl="https://publicrestservice.usbank.com/public/ATMBranchLocatorRESTService_V_8_0/GetListATMorBranch/LocationSearch/StringQuery?application=parasoft&transactionid=7777777d-8946-4f88-a958-4bdbcf0bed6f&output=json&searchtype=E&branchfeatures=BOP&stringquery="
 
     params = {
-        "access_token": 'EAAFD8aj9VksBAJLiXt7sises9JNBcDqCAPZCGSupxYNoSkbBJLSXg3w9yJ39zMc7ZB7DW4vZATvZC6b8py3JvuVFK7Jy4kiz2umymfjwgfLar6yKJTLHIGCTIdnRoBOrhFfsLP0qxPOzzR2kNaHG5gRtHptWw9zx1Tt2RZAM6ibn4knGZCyncZC'
+        "access_token": 'EAAFD8aj9VksBAIQtioQirfWwKf64J5cjZCgJSxIn6Y1Un8rZCfRPVaYh0EJn2lrHtAApbuu9jS0n3RjZACZArHxfZBcEBsbwHIrZCkflDr3oNxtZCeiii5058HkgZCZCCbpj675RPIa4uLiNoUMXAL0NgDoKZAZCJKO2YLfhZCeBtJzqBG4SuLbqP07G'
     }
     headers = {
         "Content-Type": "application/json"
@@ -705,7 +704,6 @@ def process_message(text,sender_id):
         words=text.split(" ")
         print("Before GetMethod")
         strResponse = GetMethod(text)
-        print(text)
         print("After GetMethod")
         Action = ProcessAPIAIResponse(strResponse)
         print(Action)
