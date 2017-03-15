@@ -22,7 +22,7 @@ from datetime import datetime
 ##from nltk.tokenize import word_tokenize
 
 app = Flask(__name__)
-CLIENT_ACCESS_TOKEN = '02c71e6097984c9691f891e0f63a0c14'
+CLIENT_ACCESS_TOKEN = 'd00c333e479d4ab98ca073375196ade2'
 
 #@app.route('/GetMethod', methods=['Get'])
 def GetMethod(strUserQuery):
